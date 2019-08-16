@@ -12,9 +12,17 @@
     width: @width;
     height: 40px;
     font-size: 2rem;
-    border-radius: 10px
+    border-radius: 10px;
 }
+
 .btn{    
    .custom-btn(@bgcolor:#01796f, @width:200px, @font-color:white);
+    @media @phone{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        background-color: lightseagreen;
+    }
 } 
 
