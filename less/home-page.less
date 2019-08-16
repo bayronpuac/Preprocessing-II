@@ -1,61 +1,112 @@
 .home {
-
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
-    
+    @media @phone{
+      display: flex;
+      flex-direction: column;
+    }//This closes .content-section media query 
     .text-content {
       width: 48%;
       padding-right: 1%;
-    }
+      @media @phone{
+        width: 100%;
+      }//This closes .text-content
+    }//This closes .content-section
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @phone{
+        width: 100%;
+      }//This closes .img-contnent media query
 
       img {
         border-radius: 10px;
-      }
-    }
-  }
+      }//This closes img tag
+    }//This closes .img-content
+  }//This closes .content-section
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @phone{
+      display: flex;
+      flex-direction: column-reverse;
+    }//This closes .inverse-content media query
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
-    }
+    }//This closes .text-content
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
-    }
-  }
+    }//This closes .img-content
+  }//This closes .inverse-content
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @phone{
+      margin: 0;
+      width: 100%;
+    }//This closes .content-destination media query
 
     img {
       border-radius: 10px;
-    }
-  }
+    }//This closes img tag
+  }//This closes .content-destination
 
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @phone{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    } //This closes .content-pick media query
+      
+      h4{
+        width: 100%;
+        // border: 1px solid blue;
+      }//This closes h4 tag
+      p{
+        width: 100%;
+        // border: 1px solid black;
+      }//This closes p tag
+    }//This closes .content-pick
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
-    }
-  }
+    @media @phone {
+      width: 100%;
+      padding: 0 40px;
+    }//This closes .destintation media query
+  }//This closes .destination
 }// home
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  border-bottom: 2px dashed #C0C0C0;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  @media @phone{
+    h1{
+      font-size: 30px;
+    }//This closes the h1 media query
+  }//This closes the header media query
+  h1{
+      padding: 10px 0;
+    }//This closes the h1 tag
+}//This closes the header tag
+
